@@ -2,9 +2,13 @@
 .light_themes {
     --main-color: #ffffff;
     --additional-color: rgba(0, 0, 0, 1);
+    --main-color-rgb: 255, 255, 255;
+    --additional-color-rgb: 0, 0, 0;
 }
 
 .dark_themes {
     --main-color: rgba(0, 0, 0, 1);
     --additional-color: #ffffff;
+    --main-color-rgb: 0, 0, 0;
+    --additional-color-rgb: 255, 255, 255;
 }
