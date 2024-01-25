@@ -15,6 +15,7 @@ module.exports = {
   ],
   rules: {
     'import/no-unresolved': 'error',
+    'linebreak-style': 0,
   },
   parserOptions: {
     ecmaVersion: 'latest',
