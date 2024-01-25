@@ -1,0 +1,23 @@
+@mixin large-text {
+    font {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+
+@mixin middle-text {
+    font {
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 20px;
+    }
+}
+
+@mixin small-text {
+    font {
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 20px;
+    }
+}
