@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, unref } from 'vue';
+import IconThemesChange from './icons/IconThemesChange.vue';
 
 type Themes = 'dark_themes' | 'light_themes';
 
@@ -15,8 +16,7 @@ function changeThemes() {
 
 <template>
   <button type="button" class="themes-change" @click="changeThemes">
-    <img v-if="currentThemes === 'dark_themes'" src="@/assets/ThemesChangeLight.svg" alt="">
-    <img v-else src="@/assets/ThemesChangeDark.svg" alt="">
+    <IconThemesChange></IconThemesChange>
   </button>
 </template>
 
