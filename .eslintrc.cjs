@@ -16,6 +16,15 @@ module.exports = {
   rules: {
     'import/no-unresolved': 'error',
     'linebreak-style': 0,
+    'vue/html-self-closing': ['error', {
+      html: {
+        void: 'never',
+        normal: 'always',
+        component: 'never',
+      },
+      svg: 'always',
+      math: 'always',
+    }],
   },
   parserOptions: {
     ecmaVersion: 'latest',
