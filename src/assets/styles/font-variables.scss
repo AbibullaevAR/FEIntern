@@ -1,26 +1,20 @@
 @mixin large-text {
-    font {
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 20px;
-        font-family: Roboto;
-    }
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 20px;
+    font-family: Roboto;
 }
 
 @mixin middle-text {
-    font {
-        font-weight: 500;
-        font-size: 13px;
-        line-height: 20px;
-        font-family: Roboto;
-    }
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: Roboto;
 }
 
 @mixin small-text {
-    font {
-        font-weight: 300;
-        font-size: 13px;
-        line-height: 20px;
-        font-family: Roboto;
-    }
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: Roboto;
 }
