@@ -16,6 +16,7 @@ module.exports = {
   rules: {
     'import/no-unresolved': 'error',
     'linebreak-style': 0,
+    '@typescript-eslint/no-unused-vars': 'error',
     'vue/html-self-closing': ['error', {
       html: {
         void: 'never',
