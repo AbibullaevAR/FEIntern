@@ -12,6 +12,7 @@ module.exports = {
     '@vue/eslint-config-typescript',
     '@vue/eslint-config-prettier/skip-formatting',
     '@vue/eslint-config-airbnb',
+    'plugin:import/typescript',
   ],
   rules: {
     'import/no-unresolved': 'error',
