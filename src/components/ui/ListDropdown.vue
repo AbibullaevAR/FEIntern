@@ -76,8 +76,9 @@ watchEffect(() => {
     overflow: hidden;
   }
   &__menu {
-    height: 443px;
+    max-height: 443px;
     padding-top: 10px;
+    padding-bottom: 10px;
     border-top: 1px solid rgba(var(--additional-color-rgb), 0.3);
     overflow-y: scroll;
     overflow-x: hidden;
