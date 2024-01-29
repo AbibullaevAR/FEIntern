@@ -1,12 +1,18 @@
 <script setup lang="ts">
 import { ref } from 'vue';
+import { onClickOutside } from '@vueuse/core';
 import ArrowDropdown from '@/components/icons/IconArrowDropdown.vue';
 
 const isOpen = ref(false);
+const target = ref(null);
+
+onClickOutside(target, () => {
+  isOpen.value = false;
+});
 </script>
 
 <template>
-  <div class="base-dropdown">
+  <div ref="target" class="base-dropdown">
     <div
       class="base-dropdown__trigger"
       :class="{ 'base-dropdown__trigger_border-on-open': isOpen }"
