@@ -4,7 +4,7 @@ import type { PropType, Ref } from 'vue';
 import BaseDropdown from '@/components/ui/BaseDropdown.vue';
 import IconSmallCross from '@/components/icons/IconSmallCross.vue';
 
-type TMenuItem = {
+export type TMenuItem = {
   id: number,
   name: String,
 };
