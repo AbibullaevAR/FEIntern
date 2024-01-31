@@ -25,7 +25,7 @@ const emit = defineEmits<{(e: 'update:value', value: String): void }>();
 input {
 
   @include transition-background-color;
-
+  width: 100%;
   background-color: var(--main-color);
   border: 1px solid var(--additional-color);
   color: var(--additional-color);
