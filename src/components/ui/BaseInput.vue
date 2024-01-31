@@ -12,10 +12,15 @@ defineProps({
 });
 
 const emit = defineEmits<{(e: 'update:value', value: String): void }>();
+
+function updateValue(e: Event) {
+  emit('update:value', (e.target as HTMLInputElement).value);
+}
+
 </script>
 
 <template>
-  <label><input type="text" @input="emit('update:value', value)" :value="value" :placeholder="placeholder"></label>
+  <label><input type="text" @input="updateValue" :value="value" :placeholder="placeholder"></label>
 </template>
 
 <style scoped lang="scss">
