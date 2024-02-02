@@ -44,7 +44,7 @@ onClickOutside(target, () => {
     padding: 14px;
     border-radius: 8px;
     cursor: pointer;
-    transition: border-radius 1s ease, border-color 0.7s ease;
+    transition: border-radius 1s ease, border-color 0.4s ease;
 
     &_border-on-open {
       border-radius: 8px 8px 0px 0px;
@@ -66,7 +66,7 @@ onClickOutside(target, () => {
     border: 1px solid var(--additional-color);
     border-top: none;
     top: 100%;
-    transition: opacity 0.7s, visibility 0.7s;
+    transition: opacity 0.4s, visibility 0.4s;
     opacity: 0;
     visibility: hidden;
 
@@ -80,7 +80,7 @@ onClickOutside(target, () => {
 
   &__arrow {
     transform: rotate(0);
-    transition: transform 0.7s ease;
+    transition: transform 0.4s ease;
 
     &_open {
       transform: rotate(180deg);
