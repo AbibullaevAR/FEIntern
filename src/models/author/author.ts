@@ -5,13 +5,9 @@ import getAuthors from '@/api/author';
 
 export default function initStore() {
   const authors = ref([]) as Ref<TAuthor[]>;
-  const loading = ref(false);
+  const asyncAuthors = ref<Promise<TAuthor[]>>(getAuthors());
 
-  (async () => {
-    loading.value = true;
-    authors.value = await getAuthors();
-    loading.value = false;
-  })();
+  asyncAuthors.value.then((authorsFromApi) => { authors.value = authorsFromApi; });
 
-  return { authors, loading };
+  return { authors, asyncAuthors };
 }
