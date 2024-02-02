@@ -1,17 +1,13 @@
 import { ref } from 'vue';
 import type { Ref } from 'vue';
-import type { TLocation} from '.';
+import type { TLocation } from '.';
 import getLocations from '@/api/location';
 
 export default function initStore() {
   const locations = ref([]) as Ref<TLocation[]>;
-  const loading = ref(false);
+  const asyncLocations = ref<Promise<TLocation[]>>(getLocations());
 
-  (async () => {
-    loading.value = true;
-    locations.value = await getLocations();
-    loading.value = false;
-  })();
+  asyncLocations.value.then((locationsFromApi) => { locations.value = locationsFromApi; });
 
-  return { locations, loading };
+  return { locations, asyncLocations };
 }
