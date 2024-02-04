@@ -9,18 +9,33 @@ import { LIMIT_PAINTINGS_ON_PAGE } from '@/enums';
 
 function initStore() {
   const paintings = ref([]) as Ref<TPainting[]>;
+  const currentPage = ref(1);
+
   const { backendFilters } = useFiltersStore();
 
-  watch(backendFilters, async () => {
+  function actionSetCurrentPage(page: number) {
+    currentPage.value = page;
+  }
+
+  async function reloadPaintings() {
     const requestParams = backendFilters.map((item) => item.getRequestParams()).flat()
       .filter((item) => item) as TRequestParam[];
 
     requestParams.push({ key: '_limit', value: LIMIT_PAINTINGS_ON_PAGE });
+    requestParams.push({ key: '_page', value: currentPage.value });
     const paintingsFromAPI = await getPaintings(requestParams);
 
     paintings.value = await joinWithLocations(await joinWithAuthors(paintingsFromAPI));
+  }
+
+  watch(backendFilters, () => {
+    currentPage.value = 1;
+    reloadPaintings();
   });
-  return { paintings };
+
+  watch(currentPage, reloadPaintings);
+
+  return { paintings, currentPage, actionSetCurrentPage };
 }
 
 export default initStore;
