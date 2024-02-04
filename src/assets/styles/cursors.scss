@@ -1,0 +1,25 @@
+@mixin light-default-cursor {
+  cursor: auto;
+}
+
+@mixin dark-default-cursor {
+  cursor: auto;
+}
+
+@mixin light-pointer-cursor {
+  .cursor-pointer {
+    cursor: pointer;
+  }
+  .cursor-pointer-reversed-theme {
+    cursor: url(../cursor-pointer-dark.svg), pointer;
+  }
+}
+
+@mixin dark-pointer-cursor {
+  .cursor-pointer {
+    cursor: url(../cursor-pointer-dark.svg), pointer;
+  }
+  .cursor-pointer-reversed-theme {
+    cursor: pointer;
+  }
+}

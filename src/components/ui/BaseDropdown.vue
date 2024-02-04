@@ -14,7 +14,7 @@ onClickOutside(target, () => {
 <template>
   <div ref="target" class="base-dropdown">
     <div
-      class="base-dropdown__trigger"
+      class="base-dropdown__trigger cursor-pointer"
       :class="{ 'base-dropdown__trigger_border-on-open': isOpen }"
       @click="isOpen = !isOpen"
       @keypress.enter="isOpen = !isOpen"
@@ -43,7 +43,6 @@ onClickOutside(target, () => {
     border: 1px solid var(--additional-color);
     padding: 14px;
     border-radius: 8px;
-    cursor: pointer;
     transition: border-radius 1s ease, border-color 0.4s ease;
 
     &_border-on-open {

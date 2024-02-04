@@ -69,7 +69,7 @@ watch(chosenPageNumber, () => {
       tabindex="0"
       role="button"
       :class="{ 'pagination-panel__cell_disabled': chosenPageNumber === 1 }"
-      class="pagination-panel__cell">
+      class="pagination-panel__cell cursor-pointer">
       <IconDoubleArrowPagination></IconDoubleArrowPagination>
     </div>
     <div
@@ -78,7 +78,7 @@ watch(chosenPageNumber, () => {
       tabindex="0"
       role="button"
       :class="{ 'pagination-panel__cell_disabled': chosenPageNumber === 1 }"
-      class="pagination-panel__cell">
+      class="pagination-panel__cell cursor-pointer">
       <IconArrowPagination></IconArrowPagination>
     </div>
     <div
@@ -89,7 +89,7 @@ watch(chosenPageNumber, () => {
       tabindex="0"
       role="button"
       :class="{ 'pagination-panel__cell_chosen': isChosen }"
-      class="pagination-panel__cell">
+      class="pagination-panel__cell cursor-pointer">
       {{ pageNumber }}
     </div>
     <div
@@ -98,7 +98,7 @@ watch(chosenPageNumber, () => {
       tabindex="0"
       role="button"
       :class="{ 'pagination-panel__cell_disabled': chosenPageNumber === MAX_PAGE_PAGINATION }"
-      class="pagination-panel__cell">
+      class="pagination-panel__cell cursor-pointer">
       <IconArrowPagination></IconArrowPagination>
     </div>
     <div
@@ -107,7 +107,7 @@ watch(chosenPageNumber, () => {
       tabindex="0"
       role="button"
       :class="{ 'pagination-panel__cell_disabled': chosenPageNumber === MAX_PAGE_PAGINATION }"
-      class="pagination-panel__cell">
+      class="pagination-panel__cell cursor-pointer">
       <IconDoubleArrowPagination></IconDoubleArrowPagination>
     </div>
   </div>
@@ -139,7 +139,6 @@ watch(chosenPageNumber, () => {
     width: 41px;
     height: 41px;
     border: 1px solid var(--additional-color);
-    cursor: pointer;
 
     &:hover {
       background-color: rgba(var(--additional-color-rgb), 0.3);

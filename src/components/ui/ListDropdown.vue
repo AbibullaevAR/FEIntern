@@ -48,7 +48,7 @@ watchEffect(() => {
       <template v-slot:menu>
         <div class="list-dropdown__menu">
           <div
-            class="list-dropdown__menu-item"
+            class="list-dropdown__menu-item cursor-pointer-reversed-theme"
             v-for="menuItem of menuItems"
             :key="menuItem.id"
             @click="chosenItem = menuItem"
@@ -97,7 +97,6 @@ watchEffect(() => {
 
   &__menu-item {
     @include middle-text;
-    cursor: pointer;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
