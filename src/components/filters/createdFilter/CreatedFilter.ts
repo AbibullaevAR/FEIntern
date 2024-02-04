@@ -1,5 +1,5 @@
-import type { TRequestParam } from "@/api/types";
-import AbstractBackendFilter from "../AbstractBackendFilter";
+import type { TRequestParam } from '@/api/types';
+import AbstractBackendFilter from '../AbstractBackendFilter';
 
 export default class CreatedFilter extends AbstractBackendFilter {
   fromYear: number | null = null;
