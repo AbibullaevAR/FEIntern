@@ -118,6 +118,7 @@ watch(chosenPageNumber, () => {
 .pagination-panel {
   display: flex;
   padding-top: 37px;
+  padding-bottom: 60px;
 
   :first-child {
     border-radius: 8px 0 0 8px;
