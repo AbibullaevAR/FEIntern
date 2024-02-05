@@ -6,7 +6,7 @@ const { src } = defineProps({
   src: { type: String, default: '' },
 });
 
-const imgURL = ref('src/assets/logo.svg');
+const imgURL = ref('src/assets/loading.png');
 
 watchEffect(async () => {
   const image = await getImage(src);
