@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import AsyncImg from '@/components/AsyncImg.vue';
 import type { PropType } from 'vue';
 import type { TPainting } from '@/models/painting';
 import { BASE_URL } from '@/enums';
@@ -14,7 +15,7 @@ defineProps({
 
 <template>
   <div class="painting-card">
-    <img loading="lazy" :src="`${BASE_URL}${painting.imageUrl}`" alt="">
+    <AsyncImg :src="`${BASE_URL}${painting.imageUrl}`"></AsyncImg>
     <div class="painting-card__info-panel">
       <div class="painting-card__name">{{ painting.name }}</div>
       <div>
