@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import _ from 'lodash';
-import BaseInput from '@/components/ui/BaseInput.vue';
 import { ref, watch } from 'vue';
+import BaseInput from '@/components/ui/BaseInput.vue';
 import NameFilter from './NameFilter';
 
 const nameFilter = ref(new NameFilter());

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import AsyncImg from '@/components/AsyncImg.vue';
 import type { PropType } from 'vue';
+import AsyncImg from '@/components/AsyncImg.vue';
 import type { TPainting } from '@/models/painting';
 import { BASE_URL } from '@/enums';
 
