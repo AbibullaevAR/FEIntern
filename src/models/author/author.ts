@@ -1,7 +1,7 @@
 import { ref } from 'vue';
 import type { Ref } from 'vue';
-import type { TAuthor } from '.';
 import getAuthors from '@/api/author';
+import type { TAuthor } from '.';
 
 export default function initStore() {
   const authors = ref([]) as Ref<TAuthor[]>;

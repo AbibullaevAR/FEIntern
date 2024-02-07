@@ -1,6 +1,6 @@
 import type { TRequestParam } from '@/api/types';
-import AbstractBackendFilter from '../AbstractBackendFilter';
 import type { TLocation } from '@/models/location';
+import AbstractBackendFilter from '../AbstractBackendFilter';
 
 export default class LocationFilter extends AbstractBackendFilter {
   loction: TLocation | null = null;

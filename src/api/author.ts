@@ -1,5 +1,5 @@
-import axiosInstance from './axiosConfig';
 import type { TAuthor } from '@/models/author';
+import axiosInstance from './axiosConfig';
 
 export default async function getAuthors() {
   const response = await axiosInstance.request<TAuthor[]>({

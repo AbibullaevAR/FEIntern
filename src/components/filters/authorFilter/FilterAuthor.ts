@@ -1,6 +1,6 @@
 import type { TAuthor } from '@/models/author';
-import AbstractBackendFilter from '../AbstractBackendFilter';
 import type { TRequestParam } from '@/api/types';
+import AbstractBackendFilter from '../AbstractBackendFilter';
 
 export default class FilterAuthor extends AbstractBackendFilter {
   author: TAuthor | null = null;

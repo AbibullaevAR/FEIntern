@@ -1,6 +1,6 @@
 import type { TRequestParam } from '@/api/types';
-import AbstractBackendFilter from '../AbstractBackendFilter';
 import type { TPainting } from '@/models/painting';
+import AbstractBackendFilter from '../AbstractBackendFilter';
 
 export default class NameFilter extends AbstractBackendFilter {
   name: TPainting['name'] | null = null;

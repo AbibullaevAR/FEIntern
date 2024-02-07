@@ -1,5 +1,5 @@
-import axiosInstance from './axiosConfig';
 import type { TLocation } from '@/models/location';
+import axiosInstance from './axiosConfig';
 
 export default async function getLocations() {
   const response = await axiosInstance.request<TLocation[]>({

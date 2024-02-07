@@ -3,8 +3,8 @@ import { ref, unref, watchEffect } from 'vue';
 import { storeToRefs } from 'pinia';
 import ListDropdown from '@/components/ui/ListDropdown.vue';
 import useAuthorStore from '@/stores/author';
-import FilterAuthor from './FilterAuthor';
 import type { TAuthor } from '@/models/author';
+import FilterAuthor from './FilterAuthor';
 
 const { authors } = storeToRefs(useAuthorStore());
 const filterAuthor = ref(new FilterAuthor());

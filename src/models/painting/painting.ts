@@ -3,9 +3,9 @@ import type { Ref } from 'vue';
 import useFiltersStore from '@/stores/filters';
 import getPaintings from '@/api/painting';
 import type { TRequestParam } from '@/api/types';
+import { LIMIT_PAINTINGS_ON_PAGE } from '@/enums';
 import type { TPainting } from '.';
 import { joinWithAuthors, joinWithLocations } from '../x';
-import { LIMIT_PAINTINGS_ON_PAGE } from '@/enums';
 
 function initStore() {
   const paintings = ref([]) as Ref<TPainting[]>;

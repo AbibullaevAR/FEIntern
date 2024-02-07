@@ -1,7 +1,7 @@
 import { ref } from 'vue';
 import type { Ref } from 'vue';
-import type { TLocation } from '.';
 import getLocations from '@/api/location';
+import type { TLocation } from '.';
 
 export default function initStore() {
   const locations = ref([]) as Ref<TLocation[]>;
